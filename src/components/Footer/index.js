@@ -4,7 +4,7 @@ import Text from "../Text";
 import Title from "../Title";
 
 export default function Footer({ className, ...props }) {
-  navigation = [
+  let navigation = [
     {
       id: "footer-navigation1",
       href: "#main-section",

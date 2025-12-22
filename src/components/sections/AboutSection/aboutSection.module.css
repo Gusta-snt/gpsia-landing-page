@@ -1,0 +1,17 @@
+.aboutSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.text {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.cardsWrapper {
+  display: flex;
+  gap: 10em;
+  margin-top: 5em;
+}

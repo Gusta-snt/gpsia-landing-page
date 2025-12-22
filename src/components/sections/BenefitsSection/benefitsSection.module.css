@@ -1,0 +1,20 @@
+.benefitsSection {
+  padding: 6em 0em;
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

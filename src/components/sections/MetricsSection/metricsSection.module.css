@@ -1,0 +1,12 @@
+.metricsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+}
+
+.cardsWrapper {
+  display: flex;
+  gap: 7.6em;
+  margin-top: 7em;
+  justify-content: center;
+}
