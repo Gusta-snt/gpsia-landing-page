@@ -1,0 +1,36 @@
+.logosCarousel {
+  background-color: var(--first-color);
+  width: 100vw;
+  overflow-x: auto;
+  display: flex;
+}
+
+.logosCarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6em;
+  animation: spin 9s infinite linear;
+  padding: 2em 0em 2em 6em;
+}
+
+.logo {
+  flex: 0 0 4em;
+  height: 4em;
+  width: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@keyframes spin {
+  0% {
+    translate: 0;
+  }
+  100% {
+    translate: -100%;
+  }
+}

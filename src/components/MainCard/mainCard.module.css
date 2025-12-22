@@ -1,0 +1,20 @@
+.mainCard {
+    width: 9.1em;
+    height: 9.7em;
+    font-family: Inter, sans-serif;
+    color: var(--white-text-color);
+    font-weight: 800;
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2em;
+    border-radius: 0.8em;
+    text-align: center;
+    padding: 0em 0.9em;
+}
+
+.mainCardImage {
+    width: 3em;
+}

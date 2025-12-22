@@ -1,0 +1,11 @@
+.benefitsTextContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.benefitsTitle {
+    font-weight: 900;
+}

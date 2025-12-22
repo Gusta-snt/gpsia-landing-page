@@ -1,0 +1,17 @@
+.metric {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.metricValue {
+    font-size: 4.8em;
+    line-height: 0.9em;
+    font-weight: 900;
+    background: linear-gradient(to bottom, var(--second-color), var(--first-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

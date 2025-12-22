@@ -1,0 +1,11 @@
+.title {
+    color: var(--text-color);
+    font-weight: 900;
+}
+
+.coloredText {
+    background: linear-gradient(to bottom, var(--second-color), var(--first-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
