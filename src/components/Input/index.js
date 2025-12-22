@@ -8,7 +8,7 @@ export default function Input({ className, type = "text", placeholder, rows = 4,
   };
 
   if (type === "textarea") {
-    return <textarea rows={rows} {...commonProps} />;
+    return <textarea rows={rows} {...commonProps}/>;
   }
 
   return <input type={type} {...commonProps} />;

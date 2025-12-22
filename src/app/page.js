@@ -10,6 +10,7 @@ import Metric from "@/components/Metric";
 import LogosCarousel from "@/components/LogosCarousel";
 import BenefitsText from "@/components/BenefitsText";
 import Researcher from "@/components/Researcher";
+import EmailContainer from "@/components/EmailContainer";
 
 export default function Home() {
   return (
@@ -205,6 +206,15 @@ export default function Home() {
             reseacherName="Adriano César Santana"
             text="Pós-graduando em Inteligência Artificial Generativa (AKCIT/CEIA, 2025). Pós graduando no MBA em Inteligência Artificial para Gestão e Negócios (IPOG, 2025). Pós-doutor em Microeletrônica pela Universidade de São Paulo (USP/SP, 2017). Doutor em Telecomunicações pela Universidade de Brasília (UnB/DF, 2009). Certificado como Project Management Professional (PMP) pelo Project Management Institute PMI/US, 2007). Mestre em Tecnologia da Informação pela Universidade de Brasília (UnB/DF, 2004) e Graduado em Ciência da Computação pela Pontifícia Universidade Católica deGoiás (PUC/GO, 2001). Atua em projetos interdisciplinares voltados à inovação tecnológica e à integração entre universidade e setor produtivo. Pesquisa e desenvolve produtos em Inteligência Artificial, Internet das Coisas, Métodos Ágeis de Gestão e Liderança, Gestão de Projetos e Negócios e Educação em Engenharia. Colabora com projetos no CEIA (Centro de Excelência em Inteligência Artificial) e na EMBRAPII (Empresa Brasileira de Pesquisa e Inovação Industrial)."
           />
+        </motion.section>
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+          className={styles.sendEmailSection}
+        >
+          <EmailContainer text="Enviar um E-mail" />
         </motion.section>
       </main>
     </div>
