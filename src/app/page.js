@@ -11,12 +11,13 @@ import LogosCarousel from "@/components/LogosCarousel";
 import BenefitsText from "@/components/BenefitsText";
 import Researcher from "@/components/Researcher";
 import EmailContainer from "@/components/EmailContainer";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <section className={styles.mainSection}>
+        <section className={styles.mainSection} id="main-section">
           <Image
             src="/logo.png"
             alt="Logo do GPSIA"
@@ -46,12 +47,14 @@ export default function Home() {
             />
           </div>
         </section>
+
         <motion.section
           className={styles.aboutSection}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
+          id="about-section"
         >
           <Text
             className={styles.aboutSectionText}
@@ -85,6 +88,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className={styles.actionSection}
+          id="action-section"
         >
           <Text
             className={styles.actionSectionText}
@@ -114,12 +118,14 @@ export default function Home() {
             />
           </div>
         </motion.section>
+
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className={styles.metricSection}
+          id="metric-section"
         >
           <div className={styles.metricSectionCardsWrapper}>
             <Metric
@@ -154,6 +160,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className={styles.benefitsSection}
+          id="benefits-section"
         >
           <aside className={styles.benefitsSectionLeft}>
             <BenefitsText
@@ -191,6 +198,7 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className={styles.researchersSection}
+          id="researcher-section"
         >
           <Title
             text="Principais Pesquisadores"
@@ -207,16 +215,20 @@ export default function Home() {
             text="Pós-graduando em Inteligência Artificial Generativa (AKCIT/CEIA, 2025). Pós graduando no MBA em Inteligência Artificial para Gestão e Negócios (IPOG, 2025). Pós-doutor em Microeletrônica pela Universidade de São Paulo (USP/SP, 2017). Doutor em Telecomunicações pela Universidade de Brasília (UnB/DF, 2009). Certificado como Project Management Professional (PMP) pelo Project Management Institute PMI/US, 2007). Mestre em Tecnologia da Informação pela Universidade de Brasília (UnB/DF, 2004) e Graduado em Ciência da Computação pela Pontifícia Universidade Católica deGoiás (PUC/GO, 2001). Atua em projetos interdisciplinares voltados à inovação tecnológica e à integração entre universidade e setor produtivo. Pesquisa e desenvolve produtos em Inteligência Artificial, Internet das Coisas, Métodos Ágeis de Gestão e Liderança, Gestão de Projetos e Negócios e Educação em Engenharia. Colabora com projetos no CEIA (Centro de Excelência em Inteligência Artificial) e na EMBRAPII (Empresa Brasileira de Pesquisa e Inovação Industrial)."
           />
         </motion.section>
+
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
           className={styles.sendEmailSection}
+          id="send-email-section"
         >
           <EmailContainer text="Enviar um E-mail" />
         </motion.section>
+        
       </main>
+      <Footer />
     </div>
   );
 }
