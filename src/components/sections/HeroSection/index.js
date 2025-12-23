@@ -24,11 +24,13 @@ export default function HeroSection() {
           text="Projetos Concluídos"
           backgroundColorVariable="--first-color"
           width={18}
+          href="/projetos/concluidos"
         />
         <Button
           text="Projetos em Andamento"
           backgroundColorVariable="--second-color"
           width={18}
+          href="/projetos/em-andamento"
         />
       </div>
     </section>

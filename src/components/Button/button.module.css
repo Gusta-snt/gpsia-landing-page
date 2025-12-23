@@ -1,12 +1,14 @@
 .button {
-    font-weight: 700;
-    color: var(--white-text-color);
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     font-weight: 800;
+    color: var(--white-text-color);
     font-size: 1.1em;
     border-radius: 1em;
     border: none;
     padding: 0.7em 1.7em;
-    transition: all .3s;
+    transition: all 0.3s;
     cursor: pointer;
     font-family: Inter, sans-serif;
 }

@@ -1,5 +1,7 @@
 "use client";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { supabase } from "@/lib/supabase";
 import Metric from "@/components/Metric";
 import LogosCarousel from "@/components/LogosCarousel";
 import styles from "./metricsSection.module.css";
@@ -18,9 +20,28 @@ const metrics = [
   { value: "XX", text: "artigos publicados" },
 ];
 
-const partnerLogos = ["/partner1.png", "/partner2.png", "/partner3.png"];
-
 export default function MetricsSection() {
+  const [partners, setPartners] = useState([]);
+
+  useEffect(() => {
+    async function fetchPartners() {
+      const { data, error } = await supabase
+        .from("partners")
+        .select("id, name, img_src")
+        .order("created_at", { ascending: true });
+ 
+      if (error) {
+        console.error("Supabase error:", error);
+        return;
+      }
+      
+      if (data && data.length > 0) {
+        setPartners(data.map((p) => p.img_src));
+      }
+    }
+    fetchPartners();
+  }, []);
+
   return (
     <motion.section className={styles.metricsSection} id="metric-section" {...fadeInUp}>
       <div className={styles.cardsWrapper}>
@@ -28,7 +49,7 @@ export default function MetricsSection() {
           <Metric key={index} value={metric.value} text={metric.text} />
         ))}
       </div>
-      <LogosCarousel imagesPaths={partnerLogos} />
+      {partners.length > 0 && <LogosCarousel imagesPaths={partners} />}
     </motion.section>
   );
 }
