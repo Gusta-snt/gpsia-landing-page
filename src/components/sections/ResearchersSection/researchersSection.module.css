@@ -5,3 +5,17 @@
   width: 70%;
   gap: 3em;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .researchersSection {
+    width: 90%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .researchersSection {
+    width: 95%;
+  }
+}

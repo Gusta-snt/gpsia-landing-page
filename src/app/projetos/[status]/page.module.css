@@ -61,6 +61,8 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 2rem;
   width: 100%;
+  justify-content: center;
+  justify-items: center;
 }
 
 /* Tablet */
@@ -77,6 +79,8 @@
   .grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -99,5 +103,6 @@
   .grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    justify-items: center;
   }
 }

@@ -9,3 +9,25 @@
 .benefitsTitle {
     font-weight: 900;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .benefitsTitle {
+    font-size: 1.1rem;
+  }
+  
+  .benefitsTextContainer {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .benefitsTitle {
+    font-size: 1rem;
+  }
+  
+  .benefitsTextContainer {
+    font-size: 1rem;
+  }
+}
