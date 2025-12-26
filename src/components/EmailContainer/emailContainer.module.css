@@ -34,4 +34,22 @@
     margin-top: 0.5rem;
     font-family: Inter, sans-serif;
     opacity: 0.8;
+}/* Tabl
+et */
+@media (max-width: 768px) {
+  .emailContainer {
+    padding: 1em 2em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .emailContainer {
+    padding: 1em 1.5em;
+    margin: 0 1rem;
+  }
+  
+  .info {
+    font-size: 0.8rem;
+  }
 }

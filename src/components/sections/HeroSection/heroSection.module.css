@@ -7,10 +7,12 @@
 
 .title {
   margin-top: 1.2em;
+  text-align: center;
 }
 
 .text {
   margin-top: 0.5em;
+  text-align: center;
 }
 
 .buttonsWrapper {
@@ -18,4 +20,32 @@
   flex-direction: row;
   gap: 5em;
   margin-top: 2em;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .heroSection {
+    width: 90%;
+  }
+  
+  .buttonsWrapper {
+    gap: 3em;
+  }
+}
+
+/* Small screens - buttons in column */
+@media (max-width: 690px) {
+  .buttonsWrapper {
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .heroSection {
+    width: 100%;
+  }
 }

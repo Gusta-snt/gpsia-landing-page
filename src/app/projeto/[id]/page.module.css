@@ -79,3 +79,63 @@
 .error {
   color: #e74c3c;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .main {
+    padding: 3rem 2rem 4rem;
+    width: 100%;
+  }
+  
+  .header {
+    margin: 1.5rem 0 2rem;
+  }
+  
+  .projectName {
+    font-size: 1.7rem;
+  }
+  
+  .description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .videoWrapper {
+    height: 400px;
+    margin-bottom: 3rem;
+  }
+  
+  .participantsSection {
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .main {
+    padding: 2rem 1rem 3rem;
+  }
+  
+  .header {
+    margin: 1rem 0 1.5rem;
+  }
+  
+  .projectName {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+  
+  .videoWrapper {
+    height: 250px;
+    margin-bottom: 2rem;
+  }
+  
+  .participantsSection {
+    gap: 1rem;
+  }
+}

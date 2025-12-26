@@ -15,3 +15,37 @@
   gap: 10em;
   margin-top: 5em;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .aboutSection {
+    width: 90%;
+  }
+  
+  .text {
+    margin-top: 3em;
+  }
+  
+  .cardsWrapper {
+    gap: 5em;
+    margin-top: 3em;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .aboutSection {
+    width: 100%;
+  }
+  
+  .text {
+    margin-top: 2em;
+  }
+  
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+    align-items: center;
+  }
+}

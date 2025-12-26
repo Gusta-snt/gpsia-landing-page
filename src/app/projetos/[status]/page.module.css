@@ -62,3 +62,42 @@
   gap: 2rem;
   width: 100%;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .main {
+    width: 90%;
+    padding: 3rem 0rem 4rem 0rem;
+  }
+  
+  .searchWrapper {
+    align-self: center;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .main {
+    width: 95%;
+    padding: 2rem 0rem 3rem 0rem;
+  }
+  
+  .title {
+    margin-bottom: 1.5rem;
+  }
+  
+  .searchWrapper {
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

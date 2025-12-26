@@ -37,3 +37,55 @@
 .navigationItem {
     margin-bottom: 0.2em;
 }
+
+/* Hide navigation on smaller screens */
+@media (max-width: 1070px) {
+  .navigation {
+    display: none;
+  }
+  
+  .topSection {
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .footer {
+    width: 90%;
+  }
+  
+  .topSection {
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+  
+  .contactInfo {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .footer {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .topSection {
+    gap: 1.5em;
+  }
+  
+  .navigationList {
+    text-align: center;
+  }
+  
+  .bottomSection {
+    padding: 1.5em 0;
+    text-align: center;
+  }
+}

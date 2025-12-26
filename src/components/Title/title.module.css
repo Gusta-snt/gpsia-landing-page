@@ -9,3 +9,11 @@
     background-clip: text;
     color: transparent;
 }
+
+/* Mobile */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+}

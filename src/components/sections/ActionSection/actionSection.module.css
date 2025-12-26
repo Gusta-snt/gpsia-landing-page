@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 70%;
+  padding: 0 2rem;
 }
 
 .text {
@@ -14,4 +15,43 @@
   display: flex;
   gap: 3em;
   margin-top: 5em;
+  overflow: visible;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .actionSection {
+    width: 90%;
+    padding: 0 1.5rem;
+  }
+  
+  .text {
+    margin-top: 3em;
+  }
+  
+  .cardsWrapper {
+    gap: 2em;
+    margin-top: 3em;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .actionSection {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  
+  .text {
+    margin-top: 2em;
+  }
+  
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 2em;
+    align-items: center;
+  }
 }

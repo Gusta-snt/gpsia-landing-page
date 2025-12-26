@@ -8,3 +8,21 @@
   align-items: center;
   padding-top: 9rem;
 }
+
+/* Tablet */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .main {
+    padding-top: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

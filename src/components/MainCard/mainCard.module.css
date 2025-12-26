@@ -18,3 +18,18 @@
 .mainCardImage {
     width: 3em;
 }
+
+/* Mobile */
+@media (max-width: 480px) {
+  .mainCard {
+    width: 8em;
+    height: 8.5em;
+    font-size: 1.2em;
+    gap: 1em;
+    padding: 0em 0.7em;
+  }
+  
+  .mainCardImage {
+    width: 2.5em;
+  }
+}
