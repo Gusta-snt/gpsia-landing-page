@@ -46,6 +46,7 @@ export default function ProjectsPage() {
         .eq("status", config.dbStatus);
 
       if (!error && data) {
+        console.log(data)
         setProjects(data);
       }
       setLoading(false);
@@ -61,7 +62,7 @@ export default function ProjectsPage() {
     <div className={styles.page}>
       <main className={styles.main}>
         <Link href="/">
-          <Image src="/logo.png" alt="Logo do GPSIA" width={200} height={222} />
+          <Image src="/logo.png" alt="Logo do GPSIA" width={180} height={202} />
         </Link>
         <Title className={styles.title} text={config.title} />
 
@@ -85,6 +86,7 @@ export default function ProjectsPage() {
             {filteredProjects.map((project, index) => (
               <ProjectCard
                 key={project.id}
+                projectId={project.id}
                 partnerLogo={project.partners?.img_src}
                 projectName={project.name}
                 summary={project.summary}

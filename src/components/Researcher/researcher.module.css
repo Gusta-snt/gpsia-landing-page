@@ -6,6 +6,7 @@
 .researcherContainer {
     display: flex;
 }
+
 .researcherDescriptionContainer {
     background-color: var(--second-color);
     border-bottom-right-radius: 1.5em;
@@ -14,14 +15,14 @@
 }
 
 .researcherName {
-    color: var(--white-text-color);
+    color: var(--white-text-color) !important;
     font-size: 1.6em;
     text-align: center;
     margin: 0.7em 0em;
 }
 
 .researcherText {
-    color: var(--white-text-color);
+    color: var(--white-text-color) !important;
     margin: 0 3em 1.5em 3em;
     font-size: 1.1em;
     text-align: justify;

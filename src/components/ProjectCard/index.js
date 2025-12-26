@@ -1,6 +1,8 @@
+import Link from "next/link";
 import styles from "./projectCard.module.css";
 
 export default function ProjectCard({
+  projectId,
   partnerLogo,
   projectName,
   summary,
@@ -23,9 +25,11 @@ export default function ProjectCard({
       </div>
       <h3 className={styles.projectName}>{projectName}</h3>
       <p className={styles.summary}>{summary}</p>
-      <button className={styles.button} style={{ backgroundColor: btnColor }}>
-        Saiba mais
-      </button>
+      <Link href={`/projeto/${projectId}`}>
+        <button className={styles.button} style={{ backgroundColor: btnColor }}>
+          Saiba mais
+        </button>
+      </Link>
     </div>
   );
 }
