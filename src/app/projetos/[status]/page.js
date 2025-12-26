@@ -46,7 +46,6 @@ export default function ProjectsPage() {
         .eq("status", config.dbStatus);
 
       if (!error && data) {
-        console.log(data)
         setProjects(data);
       }
       setLoading(false);
