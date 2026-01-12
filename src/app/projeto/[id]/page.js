@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
+import ReactMarkdown from "react-markdown";
+import remarkBreaks from "remark-breaks";
 import Title from "@/components/Title";
 import Footer from "@/components/Footer";
 import Researcher from "@/components/Researcher";
@@ -95,15 +97,17 @@ export default function ProjectDetailPage() {
         <Link href={statusLinks[project.status]}>
           <Image src="/logo.png" alt="Logo do GPSIA" width={180} height={202} />
         </Link>
-        
+
         <div className={styles.header}>
           <Title className={styles.status} text={statusLabels[project.status]} />
           <Title className={styles.projectName} text={project.name} />
         </div>
 
         <div className={styles.content}>
-          <p className={styles.description}>{project.description}</p>
-          
+          <div className={styles.description}>
+            <ReactMarkdown remarkPlugins={[remarkBreaks]}>{project.description}</ReactMarkdown>
+          </div>
+
           {project.video_url && (
             <div className={styles.videoWrapper}>
               <iframe

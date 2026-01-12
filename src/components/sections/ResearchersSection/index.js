@@ -27,7 +27,7 @@ const researchers = [
 export default function ResearchersSection() {
   return (
     <motion.section className={styles.researchersSection} id="researcher-section" {...fadeInUp}>
-      <Title text="Principais Pesquisadores" />
+      <Title text="Alguns pesquisadores" />
       {researchers.map((researcher, index) => (
         <Researcher
           key={index}

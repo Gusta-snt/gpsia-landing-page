@@ -21,7 +21,7 @@ export default function Home() {
         <MetricsSection />
         <BenefitsSection />
         <ResearchersSection />
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
       <Footer />
     </div>
