@@ -8,7 +8,7 @@
 
 .text {
   text-align: center;
-  margin-top: 5em;
+  margin-top: 3.2em;
 }
 
 .cardsWrapper {
@@ -24,12 +24,12 @@
     width: 90%;
     padding: 0 1.5rem;
   }
-  
+
   .text {
     margin-top: 3em;
     font-size: 1.2rem;
   }
-  
+
   .cardsWrapper {
     gap: 2em;
     margin-top: 3em;
@@ -44,12 +44,12 @@
     width: 100%;
     padding: 0 1rem;
   }
-  
+
   .text {
     margin-top: 2em;
     font-size: 1.1rem;
   }
-  
+
   .cardsWrapper {
     flex-direction: column;
     gap: 2em;

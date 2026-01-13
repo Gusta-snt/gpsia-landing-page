@@ -7,6 +7,7 @@ import { supabase } from "@/lib/supabase";
 import Title from "@/components/Title";
 import ProjectCard from "@/components/ProjectCard";
 import Footer from "@/components/Footer";
+import Loading from "@/components/Loading";
 import styles from "./page.module.css";
 
 const statusConfig = {
@@ -77,7 +78,7 @@ export default function ProjectsPage() {
         </div>
 
         {loading ? (
-          <p className={styles.loading}>Carregando projetos...</p>
+          <Loading />
         ) : filteredProjects.length === 0 ? (
           <p className={styles.empty}>Nenhum projeto encontrado.</p>
         ) : (

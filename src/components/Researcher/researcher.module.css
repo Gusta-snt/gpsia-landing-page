@@ -1,33 +1,42 @@
 .reseracherImage {
-    border-bottom-left-radius: 1.5em;
-    border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  border-top-left-radius: 1.5em;
 }
 
 .researcherContainer {
-    display: flex;
+  display: flex;
 }
 
 .researcherDescriptionContainer {
-    background-color: var(--second-color);
-    border-bottom-right-radius: 1.5em;
-    border-bottom-left-radius: 1.5em;
-    border-top-right-radius: 1.5em;
+  background-color: var(--second-color);
+  border-bottom-right-radius: 1.5em;
+  border-bottom-left-radius: 1.5em;
+  border-top-right-radius: 1.5em;
 }
 
 .researcherName {
-    color: var(--white-text-color) !important;
-    font-size: 1.6em;
-    text-align: center;
-    margin: 0.7em 0em;
-    padding: 0 1em;
+  color: var(--white-text-color) !important;
+  font-size: 1.6em;
+  text-align: center;
+  margin: 0.7em 0em 0.2em 0em;
+  padding: 0 1em;
+}
+
+.researcherPosition {
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.2em;
 }
 
 .researcherText {
-    color: var(--white-text-color) !important;
-    margin: 0 3em 1.5em 3em;
-    font-size: 1.1em;
-    text-align: justify;
-    font-weight: 300;
+  color: var(--white-text-color) !important;
+  margin: 0 3em 1.5em 3em;
+  font-size: 1.1em;
+  text-align: justify;
+  font-weight: 300;
 }
 
 /* Large screens - vertical layout */
@@ -37,7 +46,7 @@
     background-color: var(--second-color);
     border-radius: 1.5em;
   }
-  
+
   .reseracherImage {
     border-radius: 1em;
     width: 200px;
@@ -46,12 +55,12 @@
     margin: 2em auto 1em auto;
     display: block;
   }
-  
+
   .researcherDescriptionContainer {
     border-radius: 1.5em;
     padding-top: 0;
   }
-  
+
   .researcherName {
     margin-top: 0;
   }
@@ -64,12 +73,12 @@
     height: 180px;
     margin: 1.5em auto 0.8em auto;
   }
-  
+
   .researcherName {
     font-size: 1.4em;
     margin: 0.5em 0em;
   }
-  
+
   .researcherText {
     margin: 0 2em 1.2em 2em;
     font-size: 1em;
@@ -83,12 +92,12 @@
     height: 150px;
     margin: 1.2em auto 0.6em auto;
   }
-  
+
   .researcherName {
     font-size: 1.2em;
     margin: 0.4em 0em;
   }
-  
+
   .researcherText {
     margin: 0 1.5em 1em 1.5em;
     font-size: 0.95em;

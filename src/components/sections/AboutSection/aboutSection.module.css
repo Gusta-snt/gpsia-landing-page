@@ -7,7 +7,7 @@
 
 .text {
   text-align: center;
-  margin-top: 5em;
+  margin-top: 3.2em;
 }
 
 .cardsWrapper {
@@ -21,12 +21,12 @@
   .aboutSection {
     width: 90%;
   }
-  
+
   .text {
     margin-top: 3em;
     font-size: 1.2rem;
   }
-  
+
   .cardsWrapper {
     gap: 5em;
     margin-top: 3em;
@@ -38,12 +38,12 @@
   .aboutSection {
     width: 100%;
   }
-  
+
   .text {
     margin-top: 2em;
     font-size: 1.1rem;
   }
-  
+
   .cardsWrapper {
     flex-direction: column;
     gap: 2em;

@@ -14,15 +14,15 @@ const fadeInUp = {
 const benefits = [
   {
     title: "Expertise comprovada",
-    text: "Trabalhamos com base científica sólida, utilizando métodos modernos de IA e computação avançada para entregar soluções confiáveis e de alto desempenho.",
+    text: "Atuamos com base científica rigorosa, aplicando métodos modernos de Inteligência Artificial e computação avançada para o desenvolvimento de soluções robustas, confiáveis e de alto desempenho.",
   },
   {
     title: "Infraestrutura e suporte institucional",
-    text: "Como grupo vinculado ao CEIA/UFG, contamos com laboratórios de última geração, servidores de alto processamento e o apoio de pesquisadores referência no país.",
+    text: "Como grupo vinculado ao CEIA/UFG, dispomos de infraestrutura laboratorial de ponta, servidores de alto desempenho e suporte de pesquisadores reconhecidos nacionalmente.",
   },
   {
     title: "Soluções práticas e personalizadas",
-    text: "Cada projeto é construído sob medida — desde o entendimento do problema até a entrega de soluções escaláveis, eficientes e alinhadas ao impacto desejado.",
+    text: "Desenvolvemos soluções sob medida, desde a compreensão do desafio até a entrega de sistemas escaláveis, eficientes e alinhados aos objetivos estratégicos do projeto.",
   },
 ];
 

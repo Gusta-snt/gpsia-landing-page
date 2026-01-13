@@ -91,11 +91,23 @@
 .videoWrapper {
   width: 100%;
   height: 563px;
-  background: #000;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 4rem;
   position: relative;
+}
+
+.videoLoading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  z-index: 10;
 }
 
 .video {

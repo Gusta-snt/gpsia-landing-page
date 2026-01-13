@@ -9,6 +9,7 @@ import remarkBreaks from "remark-breaks";
 import Title from "@/components/Title";
 import Footer from "@/components/Footer";
 import Researcher from "@/components/Researcher";
+import Loading from "@/components/Loading";
 import styles from "./page.module.css";
 
 const statusLabels = {
@@ -26,6 +27,7 @@ export default function ProjectDetailPage() {
   const [project, setProject] = useState(null);
   const [participants, setParticipants] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [videoLoading, setVideoLoading] = useState(true);
 
   useEffect(() => {
     async function fetchProject() {
@@ -75,7 +77,7 @@ export default function ProjectDetailPage() {
     return (
       <div className={styles.page}>
         <main className={styles.main}>
-          <p className={styles.loading}>Carregando projeto...</p>
+          <Loading />
         </main>
       </div>
     );
@@ -110,11 +112,18 @@ export default function ProjectDetailPage() {
 
           {project.video_url && (
             <div className={styles.videoWrapper}>
+              {videoLoading && (
+                <div className={styles.videoLoading}>
+                  <Loading />
+                </div>
+              )}
               <iframe
                 src={project.video_url}
                 className={styles.video}
                 allowFullScreen
                 title={`Vídeo do projeto ${project.name}`}
+                onLoad={() => setVideoLoading(false)}
+                style={{ display: videoLoading ? "none" : "block" }}
               />
             </div>
           )}

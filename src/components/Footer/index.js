@@ -11,7 +11,7 @@ export default function Footer({ className, ...props }) {
     { id: "footer-navigation3", href: "/#action-section", label: "Onde atuamos" },
     { id: "footer-navigation4", href: "/#metric-section", label: "Nossos números" },
     { id: "footer-navigation5", href: "/#benefits-section", label: "Porque escolher o GPSIA" },
-    { id: "footer-navigation6", href: "/#researcher-section", label: "Alguns pesquisadores" },
+    { id: "footer-navigation6", href: "/#researcher-section", label: "Equipe" },
     /*{ id: "footer-navigation7", href: "/#send-email-section", label: "Contato" },*/
   ];
 

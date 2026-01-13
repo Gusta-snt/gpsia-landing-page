@@ -6,6 +6,11 @@
   gap: 3em;
 }
 
+.researcherText {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 /* Tablet */
 @media (max-width: 768px) {
   .researchersSection {
