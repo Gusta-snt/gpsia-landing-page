@@ -24,7 +24,9 @@ export default function AdminSidebar() {
     return (
         <aside className={styles.sidebar}>
             <div className={styles.logo}>
-                <Image src="/logo.png" alt="GPSIA Logo" width={80} height={90} />
+                <Link href="/">
+                    <Image src="/logo.png" alt="GPSIA Logo" width={80} height={90} />
+                </Link>
             </div>
             <nav className={styles.nav}>
                 {navItems.map((item) => (
