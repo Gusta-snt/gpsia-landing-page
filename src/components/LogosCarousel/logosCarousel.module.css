@@ -19,9 +19,9 @@
 }
 
 .logo {
-  flex: 0 0 4em;
   height: 4em;
   width: auto;
+  max-width: 180px;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -30,17 +30,19 @@
   0% {
     translate: 0;
   }
+
   100% {
     translate: -100%;
   }
 }
+
 /* Tablet */
 @media (max-width: 768px) {
   .group {
     gap: 4em;
     padding: 1.5em 0em 1.5em 4em;
   }
-  
+
   .logo {
     flex: 0 0 3.5em;
     height: 3.5em;
@@ -53,7 +55,7 @@
     gap: 3em;
     padding: 1em 0em 1em 3em;
   }
-  
+
   .logo {
     flex: 0 0 3em;
     height: 3em;

@@ -22,25 +22,53 @@ const metrics = [
 
 export default function MetricsSection() {
   const [partners, setPartners] = useState([]);
+  const [counts, setCounts] = useState({
+    projects: "XX",
+    partners: "XX",
+  });
 
   useEffect(() => {
-    async function fetchPartners() {
-      const { data, error } = await supabase
+    async function fetchData() {
+      // Fetch partners for the carousel and count
+      const { data: partnersData, error: partnersError, count: partnersCount } = await supabase
         .from("partners")
-        .select("id, name, img_src")
+        .select("id, name, img_src", { count: "exact" })
         .order("created_at", { ascending: true });
- 
-      if (error) {
-        console.error("Supabase error:", error);
-        return;
+
+      if (partnersError) {
+        console.error("Supabase error (partners):", partnersError);
+      } else if (partnersData) {
+        setPartners(partnersData.map((p) => p.img_src));
       }
-      
-      if (data && data.length > 0) {
-        setPartners(data.map((p) => p.img_src));
+
+      // Fetch completed projects count
+      const { count: projectsCount, error: projectsError } = await supabase
+        .from("projects")
+        .select("*", { count: "exact", head: true })
+        .eq("status", "FINISHED");
+
+      if (projectsError) {
+        console.error("Supabase error (projects):", projectsError);
       }
+
+      const format = (num) =>
+        num !== null ? (num < 10 ? `0${num}` : num) : "XX";
+
+      setCounts({
+        projects: format(projectsCount),
+        partners: format(partnersCount),
+      });
     }
-    fetchPartners();
+
+    fetchData();
   }, []);
+
+  const metrics = [
+    { value: "+10", text: "anos de experiência" },
+    { value: counts.projects, text: "projetos concluídos" },
+    { value: counts.partners, text: "empresas parceiras" },
+    { value: "XX", text: "artigos publicados" },
+  ];
 
   return (
     <motion.section className={styles.metricsSection} id="metric-section" {...fadeInUp}>

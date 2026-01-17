@@ -1,0 +1,121 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 800;
+}
+
+.createButton {
+    background: var(--second-color);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(72, 168, 213, 0.2);
+}
+
+.createButton:hover {
+    background: var(--first-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(95, 209, 138, 0.3);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--text-color);
+    /* Dark background for logos */
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border-color: var(--second-color);
+}
+
+.image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    /* Filter only if needed, but usually white logos just work on dark bg */
+}
+
+.name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--white-text-color);
+    /* White text for contrast */
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    /* Subtle separator */
+}
+
+.editButton,
+.deleteButton {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.editButton {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--white-text-color);
+}
+
+.editButton:hover {
+    background-color: white;
+    color: var(--text-color);
+}
+
+.deleteButton {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid #ef4444;
+}
+
+.deleteButton:hover {
+    background-color: #ef4444;
+    color: white;
+}

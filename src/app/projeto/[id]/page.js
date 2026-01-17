@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import remarkBreaks from "remark-breaks";
 import Title from "@/components/Title";
 import Footer from "@/components/Footer";
@@ -16,6 +17,14 @@ const statusLabels = {
   FINISHED: "Projeto Concluído",
   IN_DEVELOPMENT: "Projeto em Andamento",
 };
+
+const getStatusLabel = (status) => {
+  if (!status) return "";
+  const normalized = status.trim().toUpperCase();
+  console.log(statusLabels[normalized])
+  return statusLabels[normalized] || statusLabels.IN_DEVELOPMENT;
+};
+
 
 const statusLinks = {
   FINISHED: "/projetos/concluidos",
@@ -31,6 +40,8 @@ export default function ProjectDetailPage() {
 
   useEffect(() => {
     async function fetchProject() {
+      if (!params || !params.id) return;
+
       const { data: projectData, error: projectError } = await supabase
         .from("projects")
         .select(`
@@ -101,13 +112,13 @@ export default function ProjectDetailPage() {
         </Link>
 
         <div className={styles.header}>
-          <Title className={styles.status} text={statusLabels[project.status]} />
+          <Title className={styles.status} text={getStatusLabel(project.status)} />
           <Title className={styles.projectName} text={project.name} />
         </div>
 
         <div className={styles.content}>
           <div className={styles.description}>
-            <ReactMarkdown remarkPlugins={[remarkBreaks]}>{project.description}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkBreaks, remarkGfm]}>{project.description}</ReactMarkdown>
           </div>
 
           {project.video_url && (

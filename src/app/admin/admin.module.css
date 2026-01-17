@@ -1,0 +1,21 @@
+.mainContainer {
+    display: flex;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--text-color);
+}
+
+.content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 3rem;
+}
+
+/* Add a global style for admin loading state centering */
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background);
+}
