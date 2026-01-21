@@ -3,7 +3,7 @@ import Image from "next/image";
 import Text from "../Text";
 import Title from "../Title";
 
-export default function Researcher({ className, reseacherName, reseacherPosition, text, imageSrc }) {
+export default function Researcher({ className, reseacherName, reseacherPosition, headline, text, imageSrc }) {
     return (
         <div className={`${styles.researcherContainer} ${className || ""}`}>
             <Image
@@ -18,6 +18,12 @@ export default function Researcher({ className, reseacherName, reseacherPosition
                     className={styles.researcherName}
                     text={reseacherName}
                 />
+                {headline && (
+                    <Text
+                        className={styles.researcherHeadline}
+                        text={headline}
+                    />
+                )}
                 <Text
                     className={styles.researcherPosition}
                     text={reseacherPosition}

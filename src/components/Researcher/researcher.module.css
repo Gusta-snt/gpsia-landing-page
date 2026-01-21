@@ -5,6 +5,7 @@
 
 .researcherContainer {
   display: flex;
+  justify-content: center;
 }
 
 .researcherDescriptionContainer {
@@ -12,23 +13,40 @@
   border-bottom-right-radius: 1.5em;
   border-bottom-left-radius: 1.5em;
   border-top-right-radius: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .researcherName {
   color: var(--white-text-color) !important;
   font-size: 1.6em;
   text-align: center;
-  margin: 0.7em 0em 0.2em 0em;
+  margin: 0.7em 0em 0.5em 0em;
   padding: 0 1em;
 }
 
+.researcherHeadline {
+  font-size: 1.05rem;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  margin: 0em 2.5em 1em 2.5em;
+  line-height: 1.5;
+  letter-spacing: 0.3px;
+  width: 80%;
+}
+
 .researcherPosition {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
   width: 100%;
   font-weight: 700;
   color: white;
   margin-bottom: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .researcherText {
@@ -79,6 +97,11 @@
     margin: 0.5em 0em;
   }
 
+  .researcherHeadline {
+    font-size: 1rem;
+    margin: 0em 1.8em 0.9em 1.8em;
+  }
+
   .researcherText {
     margin: 0 2em 1.2em 2em;
     font-size: 1em;
@@ -96,6 +119,12 @@
   .researcherName {
     font-size: 1.2em;
     margin: 0.4em 0em;
+  }
+
+  .researcherHeadline {
+    font-size: 0.9rem;
+    margin: 0em 1.5em 0.8em 1.5em;
+    letter-spacing: 0.2px;
   }
 
   .researcherText {

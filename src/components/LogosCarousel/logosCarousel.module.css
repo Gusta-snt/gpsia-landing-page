@@ -19,9 +19,8 @@
 }
 
 .logo {
-  height: 4em;
-  width: auto;
-  max-width: 180px;
+  height: 6em;
+  width: 14em;
   flex-shrink: 0;
   object-fit: contain;
 }
@@ -44,8 +43,8 @@
   }
 
   .logo {
-    flex: 0 0 3.5em;
-    height: 3.5em;
+    height: 4.2em;
+    width: 10em;
   }
 }
 
@@ -57,7 +56,7 @@
   }
 
   .logo {
-    flex: 0 0 3em;
-    height: 3em;
+    height: 3.5em;
+    width: 8em;
   }
 }

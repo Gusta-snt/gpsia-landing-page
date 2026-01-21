@@ -16,8 +16,9 @@ const researchers = [
   {
     imageSrc: "/researcher1.png",
     name: "Thyago Carvalho Marques",
+    headline: "Professor e Pesquisador | Engenharia Econômica, IA e Otimização | Finanças, Indústria e Governo | Ciência de Dados e P&D Aplicado",
     position: "Coordenador",
-    text: "Possui graduação em Ciência da Computação pelo Instituto Unificado Ensino Superior Objetivo (1999), mestrado em Engenharia Elétrica e de Computação pela Universidade Federal de Goiás (2002) e doutorado em Engenharia Elétrica e Computação e pós-graduado em Economia Financeira pela Universidade Estadual de Campinas (2006), pós graduado em Planejamento Tributário pela Faculdade de Administração e Ciências Econômicas - FACE da Universidade Federal de Goiás (2015). É Professor Associado IV da Universidade Federal de Goiás (UFG) na Escola de Engenharia Elétrica, Mecânica e de Computação (EMC). Tem experiência na área de engenharia econômica e financeira, otimização matemática, projeto e desenvolvimento de software inteligentes utilizando Business Intelligence, Data Science e Inteligência Artificial, e estudo de viabilidade econômica e financeira. Tem experiência no Mercado de Capitais e no desenvolvimento de HFT (High Frequent Trading) para operações automatizadas em mercados financeiros. É coordenador do Curso de Especialização em Engenharia Econômica e Financeira nos Negócios. Foi membro do Conselho Gestor da UFG. Foi sub secretário de Ciência, Tecnologia e Inovação no Estado de Goiás em 2021. É coordenador de Desenvolvimento de Projetos no CEIA (Centro de Excelência em Inteligência Artificial) e pesquisador EMBRAPII (Empresa Brasileira de Pesquisa e Inovação Industrial).",
+    text: "Thyago Carvalho Marques é professor associado IV da Universidade Federal de Goiás (UFG), vinculado à Escola de Engenharia Elétrica, Mecânica e de Computação (EMC), atuando também como coordenador de Desenvolvimento de Projetos no Centro de Excelência em Inteligência Artificial (CEIA) e como pesquisador credenciado à EMBRAPII. Sua atuação acadêmica e profissional concentra-se nas áreas de engenharia econômica e financeira, otimização matemática, ciência de dados e inteligência artificial, com forte orientação à pesquisa aplicada, inovação tecnológica e apoio à tomada de decisão. Desenvolve e coordena projetos de pesquisa, desenvolvimento e inovação (P&D) em parceria com instituições públicas, programas de fomento à inovação e setor produtivo, com ênfase em business intelligence, métodos quantitativos, desenvolvimento de software inteligente e sistemas automatizados. Possui experiência na aplicação dessas soluções aos setores de finanças, indústria, governo e inovação tecnológica, incluindo o desenvolvimento de sistemas automatizados de negociação no mercado de capitais (High Frequency Trading). É doutor em Engenharia Elétrica e de Computação pela Universidade Estadual de Campinas (UNICAMP), mestre em Engenharia Elétrica e de Computação pela Universidade Federal de Goiás, graduado em Ciência da Computação pelo Instituto Unificado de Ensino Superior Objetivo, além de possuir especializações em Economia Financeira e Planejamento Tributário. Sua trajetória integra formação acadêmica sólida, produção científica, inovação aplicada e atuação na formação de profissionais em nível de graduação e pós-graduação.",
   },
   /*{
     imageSrc: "/researcher2.png",
@@ -36,6 +37,7 @@ export default function ResearchersSection() {
           key={index}
           imageSrc={researcher.imageSrc}
           reseacherName={researcher.name}
+          headline={researcher.headline}
           reseacherPosition={researcher.position}
           text={researcher.text}
         />
