@@ -13,7 +13,8 @@ export default function ParticipantForm() {
     const [formData, setFormData] = useState({
         name: "",
         profile_picture: "",
-        description: "",
+        headline: "",
+        lattes_url: "",
     });
     const [loading, setLoading] = useState(!isNew);
     const [saving, setSaving] = useState(false);
@@ -33,7 +34,6 @@ export default function ParticipantForm() {
         e.preventDefault();
         setSaving(true);
 
-        // Convert empty description to null if needed, or keep string
         const payload = { ...formData };
 
         let error;
@@ -73,7 +73,7 @@ export default function ParticipantForm() {
                     <label>URL da Foto de Perfil</label>
                     <input
                         type="text"
-                        value={formData.profile_picture}
+                        value={formData.profile_picture || ""}
                         onChange={(e) => setFormData({ ...formData, profile_picture: e.target.value })}
                         className={styles.input}
                     />
@@ -88,11 +88,22 @@ export default function ParticipantForm() {
                 )}
 
                 <div className={styles.field}>
-                    <label>Descrição (Bio)</label>
-                    <textarea
-                        value={formData.description || ""}
-                        onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                        className={`${styles.input} ${styles.textarea}`}
+                    <label>Headline (Cargo/Função)</label>
+                    <input
+                        type="text"
+                        value={formData.headline || ""}
+                        onChange={(e) => setFormData({ ...formData, headline: e.target.value })}
+                        className={styles.input}
+                    />
+                </div>
+
+                <div className={styles.field}>
+                    <label>URL do Lattes</label>
+                    <input
+                        type="text"
+                        value={formData.lattes_url || ""}
+                        onChange={(e) => setFormData({ ...formData, lattes_url: e.target.value })}
+                        className={styles.input}
                     />
                 </div>
 

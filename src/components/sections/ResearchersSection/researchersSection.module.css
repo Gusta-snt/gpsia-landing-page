@@ -1,14 +1,16 @@
 .researchersSection {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 70%;
   gap: 3em;
+  margin-bottom: 4rem;
 }
 
 .researcherText {
   font-size: 1.2rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 
 /* Tablet */

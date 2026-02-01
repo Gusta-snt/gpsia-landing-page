@@ -1,135 +1,179 @@
+/* Base Image */
 .reseracherImage {
-  border-bottom-left-radius: 1.5em;
-  border-top-left-radius: 1.5em;
+  object-fit: cover;
+  border-radius: 1rem;
 }
 
+/* --- Vertical Card (Grid) --- */
 .researcherContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  border-radius: 1.5em;
+  overflow: hidden;
+  width: 100%;
+  max-width: 350px;
+  align-items: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
-.researcherDescriptionContainer {
-  background-color: var(--second-color);
-  border-bottom-right-radius: 1.5em;
-  border-bottom-left-radius: 1.5em;
-  border-top-right-radius: 1.5em;
+.researcherContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.researcherContainer .reseracherImage {
+  width: 100%;
+  height: 300px;
+  border-bottom: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.researcherContainer .researcherDescriptionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1.5rem 0 0 0;
+  /* Reduced side padding, keep top padding */
+  flex-grow: 1;
+  width: 100%;
 }
 
+/* --- Horizontal Card (Featured) --- */
+.horizontalContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--second-color);
+  border-radius: 1.5em;
+  overflow: hidden;
+  width: 100%;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  /* Padding to frame the image */
+  gap: 2rem;
+  /* Space between image and text */
+}
+
+.horizontalContainer .reseracherImage {
+  width: 200px;
+  /* Fixed width */
+  height: 200px;
+  flex-shrink: 0;
+  border-right: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.horizontalContainer .researcherDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  /* padding handled by parent gap */
+  width: 100%;
+}
+
+.horizontalContainer .researcherName {
+  text-align: left;
+  font-size: 1.8em;
+  margin-bottom: 0.5em;
+}
+
+.horizontalContainer .researcherHeadline {
+  text-align: left;
+  font-size: 1.1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.horizontalContainer .lattesButton {
+  align-self: flex-start;
+}
+
+
+/* --- Shared Typography --- */
 .researcherName {
   color: var(--white-text-color) !important;
-  font-size: 1.6em;
+  font-size: 1.4em;
   text-align: center;
-  margin: 0.7em 0em 0.5em 0em;
-  padding: 0 1em;
+  margin: 0.5em 0;
+  line-height: 1.2;
 }
 
 .researcherHeadline {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   text-align: center;
   width: 100%;
-  font-weight: 500;
-  color: white;
-  margin: 0em 2.5em 1em 2.5em;
-  line-height: 1.5;
-  letter-spacing: 0.3px;
-  width: 80%;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1.5em;
+  line-height: 1.4;
+  flex-grow: 1;
 }
 
-.researcherPosition {
-  font-size: 1.3rem;
-  text-align: center;
-  width: 100%;
+.lattesButton {
+  background-color: white;
+  color: var(--second-color);
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
   font-weight: 700;
-  color: white;
-  margin-bottom: 1.2em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  margin-top: auto;
 }
 
-.researcherText {
-  color: var(--white-text-color) !important;
-  margin: 0 3em 1.5em 3em;
-  font-size: 1.1em;
-  text-align: justify;
-  font-weight: 300;
+.lattesButton:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
 }
 
-/* Large screens - vertical layout */
-@media (max-width: 1100px) {
-  .researcherContainer {
+/* --- Media Queries --- */
+
+/* Tablet - Switch Horizontal to Stacked/Vertical-ish if needed */
+@media (max-width: 900px) {
+  .horizontalContainer {
     flex-direction: column;
-    background-color: var(--second-color);
-    border-radius: 1.5em;
+    max-width: 400px;
+    padding: 1.5rem;
+    gap: 1rem;
   }
 
-  .reseracherImage {
-    border-radius: 1em;
-    width: 200px;
+  .horizontalContainer .reseracherImage {
+    width: 60%;
     height: 200px;
-    object-fit: cover;
-    margin: 2em auto 1em auto;
-    display: block;
+    border-right: none;
+    border-bottom: none;
   }
 
-  .researcherDescriptionContainer {
-    border-radius: 1.5em;
-    padding-top: 0;
+  .horizontalContainer .researcherDescriptionContainer {
+    align-items: center;
+    text-align: center;
   }
 
-  .researcherName {
-    margin-top: 0;
-  }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .reseracherImage {
-    width: 180px;
-    height: 180px;
-    margin: 1.5em auto 0.8em auto;
+  .horizontalContainer .researcherName,
+  .horizontalContainer .researcherHeadline {
+    text-align: center;
   }
 
-  .researcherName {
-    font-size: 1.4em;
-    margin: 0.5em 0em;
-  }
-
-  .researcherHeadline {
-    font-size: 1rem;
-    margin: 0em 1.8em 0.9em 1.8em;
-  }
-
-  .researcherText {
-    margin: 0 2em 1.2em 2em;
-    font-size: 1em;
+  .horizontalContainer .lattesButton {
+    align-self: center;
   }
 }
 
-/* Mobile */
+/* Mobile adjustments */
 @media (max-width: 480px) {
-  .reseracherImage {
-    width: 150px;
-    height: 150px;
-    margin: 1.2em auto 0.6em auto;
-  }
-
   .researcherName {
-    font-size: 1.2em;
-    margin: 0.4em 0em;
+    font-size: 1.3em;
   }
 
-  .researcherHeadline {
-    font-size: 0.9rem;
-    margin: 0em 1.5em 0.8em 1.5em;
-    letter-spacing: 0.2px;
-  }
-
-  .researcherText {
-    margin: 0 1.5em 1em 1.5em;
-    font-size: 0.95em;
-    text-align: justify;
+  /* Target both containers to ensure specificity overrides the default styles */
+  .researcherContainer .reseracherImage,
+  .horizontalContainer .reseracherImage {
+    height: 200px;
+    /* Reduced from 300px/250px */
   }
 }

@@ -13,13 +13,6 @@ const fadeInUp = {
   transition: { duration: 0.8 },
 };
 
-const metrics = [
-  { value: "+10", text: "anos de experiência" },
-  { value: "XX", text: "projetos concluídos" },
-  { value: "XX", text: "empresas parceiras" },
-  { value: "XX", text: "artigos publicados" },
-];
-
 export default function MetricsSection() {
   const [partners, setPartners] = useState([]);
   const [counts, setCounts] = useState({
@@ -67,7 +60,7 @@ export default function MetricsSection() {
     { value: "+10", text: "anos de experiência" },
     { value: counts.projects, text: "projetos concluídos" },
     { value: counts.partners, text: "empresas parceiras" },
-    { value: "XX", text: "artigos publicados" },
+    { value: "15", text: "artigos publicados" },
   ];
 
   return (

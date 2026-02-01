@@ -11,7 +11,7 @@ export default function Footer({ className, ...props }) {
     { id: "footer-navigation3", href: "/#action-section", label: "Onde atuamos" },
     { id: "footer-navigation4", href: "/#metric-section", label: "Nossos números" },
     { id: "footer-navigation5", href: "/#benefits-section", label: "Porque escolher o GPSIA" },
-    { id: "footer-navigation6", href: "/#researcher-section", label: "Equipe" },
+    { id: "footer-navigation6", href: "/pesquisadores", label: "Pesquisadores" },
     /*{ id: "footer-navigation7", href: "/#send-email-section", label: "Contato" },*/
   ];
 
@@ -31,14 +31,13 @@ export default function Footer({ className, ...props }) {
           </ul>
         </nav>
         <div className={styles.contactInfo}>
-          <Title text="Contato" style={{ fontSize: "1.7em", fontWeight: "700", marginBottom: "0.2em" }} />
-          <div>
-            <Image src="/email-icon.svg" alt="Email Icon" width={19} height={19} />
-            <Text text="contato@gpsia.com.br" fontSize={1} />
+          <div className={styles.contactBlock}>
+            <Title text="Fale Conosco" style={{ fontSize: "1.05em", fontWeight: "700", marginBottom: "0.2em" }} />
+            <Text text="+55 (62) 3521-1505" fontSize={0.9} />
           </div>
-          <div>
-            <Image src="/phone-icon.svg" alt="Phone Icon" width={19} height={19} />
-            <Text text="(11) 99999-9999" fontSize={1} />
+          <div className={styles.contactBlock}>
+            <Title text="E-mail" style={{ fontSize: "1.05em", fontWeight: "700", marginBottom: "0.2em" }} />
+            <Text text="ceia.inf@ufg.br" fontSize={0.9} />
           </div>
         </div>
       </div>

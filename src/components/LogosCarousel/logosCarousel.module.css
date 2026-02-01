@@ -13,14 +13,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6em;
+  gap: 1em;
   animation: spin 9s infinite linear;
-  padding: 2em 0em 2em 6em;
+  padding: 2em 0em 2em 1em;
 }
 
 .logo {
-  height: 6em;
-  width: 14em;
+  height: 3em;
+  /* width controlada dinamicamente via JS inline style */
   flex-shrink: 0;
   object-fit: contain;
 }

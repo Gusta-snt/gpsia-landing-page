@@ -1,0 +1,11 @@
+.logoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.page {
+    padding-top: 0rem;
+}

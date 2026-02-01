@@ -10,6 +10,7 @@ import {
   ResearchersSection,
   ContactSection,
 } from "@/components/sections";
+import Button from "@/components/Button";
 
 export default function Home() {
   return (
@@ -20,7 +21,15 @@ export default function Home() {
         <ActionSection />
         <MetricsSection />
         <BenefitsSection />
-        <ResearchersSection />
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "4rem", marginTop: "-2rem" }}>
+          <Button
+            text="Conheça nossos pesquisadores!"
+            backgroundColorVariable="--second-color"
+            width={25}
+            href="/pesquisadores"
+          />
+        </div>
+        {/* <ResearchersSection /> */}
         {/* <ContactSection /> */}
       </main>
       <Footer />
